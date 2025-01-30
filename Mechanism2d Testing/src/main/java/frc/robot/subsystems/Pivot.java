@@ -24,8 +24,7 @@ public class Pivot extends SubsystemBase {
   private SparkMax m_PivotMotor = new SparkMax(PivotConstants.kPivotMotorID, MotorType.kBrushless);
 
 
-  private DCMotorSim m_PivotSim = new DCMotorSim(
-    LinearSystemId.createDCMotorSystem(DCMotor.getNEO(1), 0.001, PivotConstants.kGearRatio), DCMotor.getNEO(1));
+  private DCMotorSim m_PivotSim = new DCMotorSim(LinearSystemId.createDCMotorSystem(DCMotor.getNEO(1), 0.001, PivotConstants.kGearRatio), DCMotor.getNEO(1));
   
 
 
@@ -53,6 +52,10 @@ public class Pivot extends SubsystemBase {
     // return m_encoder.getDistance();
     // return m_encoderSim.getDistance();
     return m_PivotSim.getAngularPositionRotations(); 
+  }
+
+  public DCMotorSim getPivotSim(){
+    return m_PivotSim;
   }
 
   @Override

@@ -5,6 +5,7 @@
 package frc.robot.commands;
 
 
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.Mechanism2d;
 import edu.wpi.first.wpilibj.smartdashboard.MechanismLigament2d;
 import edu.wpi.first.wpilibj.smartdashboard.MechanismRoot2d;
@@ -12,7 +13,6 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.util.Color;
 import edu.wpi.first.wpilibj.util.Color8Bit;
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.Constants.PivotConstants;
 import frc.robot.subsystems.Pivot;
 
@@ -21,12 +21,12 @@ public class ArcadePivot extends Command {
   /** Creates a new ArcadePivot. */
 
   private Pivot pivot;
-  private CommandXboxController joystick;
+  private XboxController joystick;
   private Mechanism2d m_pivotSim;
   private MechanismRoot2d m_root;
   private MechanismLigament2d m_pivotObj;
 
-  public ArcadePivot(Pivot pivot, CommandXboxController joystick) {
+  public ArcadePivot(Pivot pivot, XboxController joystick) {
     this.pivot = pivot;
     this.joystick = joystick;
 
@@ -34,6 +34,7 @@ public class ArcadePivot extends Command {
     addRequirements(pivot);
 
 
+    // make the mech2d object thing
     m_pivotSim = new Mechanism2d(1,1);
     // place the pivot root halfway
     m_root = m_pivotSim.getRoot("pivot anchor", 0.5, 0);

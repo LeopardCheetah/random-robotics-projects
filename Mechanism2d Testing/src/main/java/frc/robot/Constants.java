@@ -18,10 +18,13 @@ public final class Constants {
 
     public static final double kArcadePivotSpeedLimiter = 1.0;
 
-    public static final double kToleranceRotations = 0.3; // within 0.3 of a rotation
+    public static final double kToleranceRotations = 0.1; // within 0.1 of a rotation is when we're done
     public static final double kPivotSpeed = 0.8;
 
     public static final double kGearRatio = 10.0;
+
+
+    public static final double kP = 0.4;
   }
 
   public static class JoystickConstants{
