@@ -43,7 +43,7 @@ public class PivotToAngle extends Command {
   @Override
   public boolean isFinished() {
 
-    if ((m_pivot.getRotations() - kgoal < PivotConstants.kToleranceRotations) &&
+    if ((m_pivot.getRotations() - kgoal < PivotConstants.kToleranceRotations) ||
         (kgoal - m_pivot.getRotations() < PivotConstants.kToleranceRotations)){
         return true;
     }
