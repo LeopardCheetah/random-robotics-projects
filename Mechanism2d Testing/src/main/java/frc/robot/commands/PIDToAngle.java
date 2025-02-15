@@ -28,7 +28,7 @@ public class PIDToAngle extends Command {
   @Override
   public void initialize() {}
 
-  // Called every time the scheduler runs while the command is scheduled.
+  // Called every time the scheduler runs while the  command is scheduled.
   @Override
   public void execute() {
     // speed is proportional to distance to goal

@@ -13,21 +13,13 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-  public static class PivotConstants {
-    public static final int kPivotMotorID = 0;
-
-    public static final double kArcadePivotSpeedLimiter = 1.0;
-
-    public static final double kToleranceRotations = 0.1; // within 0.1 of a rotation is when we're done
-    public static final double kPivotSpeed = 0.8;
-
-    public static final double kGearRatio = 10.0;
-
-
-    public static final double kP = 0.3;
+  public static class ElevatorConstants {
+    public static final int kElevatorMotorID = 0;
+    public static final int kElevatorJoystickAxis = 0;
+    
   }
 
   public static class JoystickConstants{
-    public static final int kPort = 0;
+    public static final int kJoystickPort = 0;
   }
 }
